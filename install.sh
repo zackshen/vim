@@ -27,6 +27,7 @@ echo '
 ' > /etc/apt/sources.list
 
 sudo apt-get install -y git-core 
+sudo apt-get install -y libclang-dev
 sudo apt-get install -y build-essential 
 sudo apt-get install -y cmake automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 sudo apt-get install -y python-dev
