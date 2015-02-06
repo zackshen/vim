@@ -21,4 +21,4 @@ ln -s $VIM_RUNTIME ~/.vim
 echo "link dotvim to ~/.vim"
 
 # vim +NeoBundleInstall +qall +y
-$VIM_RUNTIME/bundle/neobundle/bin/neoinstall
+$VIM_RUNTIME/bundle/neobundle.vim/bin/neoinstall

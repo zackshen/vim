@@ -51,6 +51,14 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
+" Env
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
+    let os='osx'
+elseif os == 'Linux'
+    let os='linux'
+endif
+
 " UI
 set nu
 set nobackup
@@ -185,21 +193,21 @@ nnoremap <Leader>fu :CtrlPFunky<Cr>
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " vim-go {
-"let g:go_bin_path = "/home/vagrant/documents/go/bin/"
-"let g:go_disable_autoinstall = 1
+let g:go_bin_path = "~/.vim/tools/go/".os
+let g:go_disable_autoinstall = 1
 " type info
-"au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>i <Plug>(go-info)
 " godoc
-"au FileType go nmap <Leader>gd <Plug>(go-doc)
-"au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-"au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-"" go-run go-build go-test
-"au FileType go nmap <leader>r <Plug>(go-run)
-"au FileType go nmap <leader>b <Plug>(go-build)
-"au FileType go nmap <leader>t <Plug>(go-test)
-"" godef
-"au FileType go nmap <leader>g <Plug>(go-def)
-"au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+" go-run go-build go-test
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+" godef
+au FileType go nmap <leader>g <Plug>(go-def)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
 
 
 " Custom Func
