@@ -14,11 +14,11 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
-"NeoBundle 'Valloric/YouCompleteMe', {
-"      \ 'build' : {
-"      \     'linux': './install.sh --clang-completer'
-"      \    },
-"      \ }
+NeoBundle 'Valloric/YouCompleteMe', {
+      \ 'build' : {
+      \     'linux': './install.sh --clang-completer --system-libclang'
+      \    },
+      \ }
 
 " Python
 NeoBundle 'davidhalter/jedi-vim'
