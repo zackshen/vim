@@ -32,6 +32,13 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y cmake automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 sudo apt-get install -y python-dev
 
+
+mkdir -p ~/downloads && cd ~/downloads
+wget -c https://github.com/zackshen/vim/blob/master/vim-7-4-589.zip && unzip vim-7-4-589.zip && cd vim-7-4-589.zip
+./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope --enable-luainterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
+make & make install
+git clone https://github.com/zackshen/vim ~/.vim && sh ~/.vim/install.sh
+
 # the_siliver_searcher
 # mkdir -p ./build && cd ./build && git clone https://github.com/ggreer/the_silver_searcher && ./build.sh && sudo make install
 
