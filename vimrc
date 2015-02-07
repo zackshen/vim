@@ -46,6 +46,7 @@ call neobundle#end()
 
 " Required:
 filetype plugin indent on
+syntax on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
